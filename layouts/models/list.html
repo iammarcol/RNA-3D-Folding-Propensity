@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+<section class="page-header">
+  <h1>RNA Models</h1>
+  <p>Browse all available Rfam-family RNA model entries.</p>
+</section>
+
+<section class="model-sort-section">
+  <div class="sort-controls">
+    <label for="sortMetric">Sort by</label>
+
+    <select id="sortMetric">
+      <option value="rfam_id">Rfam family</option>
+      <option value="three_dfp" selected>3DFP</option>
+      <option value="ptm">pTM</option>
+      <option value="tm_similarity">TM-similarity</option>
+      <option value="length">Length</option>
+    </select>
+
+    <select id="sortDirection">
+      <option value="desc">Decreasing</option>
+      <option value="asc">Increasing</option>
+    </select>
+  </div>
+
+  <p id="modelCount" class="model-count"></p>
+</section>
+
+<section id="modelGrid" class="model-grid"></section>
+
+<script src="/js/models-list.js"></script>
+
+{{ end }}

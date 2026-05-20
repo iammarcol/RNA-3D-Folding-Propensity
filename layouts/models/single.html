@@ -1,0 +1,99 @@
+{{ define "main" }}
+
+<section class="model-header">
+  <div>
+    <p class="eyebrow">Rfam family</p>
+    <h1>{{ .Params.rfam_id }}</h1>
+    <p class="model-name">
+      RNA 3D folding propensity model
+    </p>
+  </div>
+
+  <a class="download-button" href="{{ .Params.pdb_file }}" download>
+    Download PDB
+  </a>
+</section>
+
+<section class="viewer-section">
+  <div
+    id="viewer"
+    class="viewer"
+    data-pdb-url="{{ .Params.pdb_file }}"
+  ></div>
+
+  <div class="viewer-controls">
+    <button onclick="setStick()">Stick</button>
+    <button onclick="setSphere()">Sphere</button>
+    <button onclick="setLine()">Line</button>
+    <button onclick="setCartoon()">Cartoon</button>
+    <button onclick="resetView()">Reset view</button>
+  </div>
+</section>
+
+<section class="metadata-section">
+  <h2>Model metadata</h2>
+
+  <table class="metadata-table">
+    <tbody>
+      <tr>
+        <th>Rfam family</th>
+        <td>{{ .Params.rfam_id }}</td>
+      </tr>
+
+      {{ with .Params.pdb_id }}
+      <tr>
+        <th>PDB ID</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      {{ with .Params.in_pdb }}
+      <tr>
+        <th>In PDB</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      {{ with .Params.three_dfp }}
+      <tr>
+        <th>3DFP</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      {{ with .Params.ptm }}
+      <tr>
+        <th>pTM</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      {{ with .Params.tm_similarity }}
+      <tr>
+        <th>TM-similarity</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      {{ with .Params.length }}
+      <tr>
+        <th>Length</th>
+        <td>{{ . }}</td>
+      </tr>
+      {{ end }}
+
+      <tr>
+        <th>PDB file</th>
+        <td><code>{{ .Params.pdb_file }}</code></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p class="metadata-note">
+    <strong>3DFP</strong> means <strong>3D Folding Propensity</strong>.
+  </p>
+</section>
+
+<script src="/js/viewer.js"></script>
+
+{{ end }}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{ partial "head.html" . }}
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">RNA Model Explorer</a>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/models/">Models</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <p>RNA Model Explorer</p>
+    </footer>
+  </body>
+</html>

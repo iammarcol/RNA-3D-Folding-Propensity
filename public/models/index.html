@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RNA Models | RNA Model Explorer</title>
+
+  
+  
+    <link rel="stylesheet" href="/css/main.css">
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/3dmol@2.0.5/build/3Dmol-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+</head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">RNA Model Explorer</a>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/models/">Models</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+
+<section class="page-header">
+  <h1>RNA Models</h1>
+  <p>Browse all available Rfam-family RNA model entries.</p>
+</section>
+
+<section class="model-sort-section">
+  <div class="sort-controls">
+    <label for="sortMetric">Sort by</label>
+
+    <select id="sortMetric">
+      <option value="rfam_id">Rfam family</option>
+      <option value="three_dfp" selected>3DFP</option>
+      <option value="ptm">pTM</option>
+      <option value="tm_similarity">TM-similarity</option>
+      <option value="length">Length</option>
+    </select>
+
+    <select id="sortDirection">
+      <option value="desc">Decreasing</option>
+      <option value="asc">Increasing</option>
+    </select>
+  </div>
+
+  <p id="modelCount" class="model-count"></p>
+</section>
+
+<section id="modelGrid" class="model-grid"></section>
+
+<script src="/js/models-list.js"></script>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>RNA Model Explorer</p>
+    </footer>
+  </body>
+</html>

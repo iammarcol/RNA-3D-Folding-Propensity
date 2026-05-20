@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta name="generator" content="Hugo 0.161.1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RNA Model Explorer | RNA Model Explorer</title>
+
+  
+  
+    <link rel="stylesheet" href="/css/main.css">
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/3dmol@2.0.5/build/3Dmol-min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pako@2.1.0/dist/pako.min.js"></script>
+</head>
+  <body>
+    <header class="site-header">
+      <a class="site-title" href="/">RNA Model Explorer</a>
+
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <a href="/models/">Models</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      
+
+<section class="hero">
+  <div>
+    <p class="eyebrow">Rfam family models</p>
+    <h1>3D folding propensity</h1>
+    <p class="hero-text">
+      Search for an Rfam family, open the model page,
+      and inspect the predicted RNA structure and its 3D folding propensity score.
+    </p>
+  </div>
+</section>
+
+<section class="search-section">
+  <h2>Search models</h2>
+
+  <div class="search-box">
+    <input
+      id="searchInput"
+      type="text"
+      placeholder="Search Rfam ID, e.g. RF00001"
+      autocomplete="off"
+    >
+  </div>
+
+  <div id="searchResults" class="search-results"></div>
+</section>
+
+<script src="/js/search.js"></script>
+
+
+    </main>
+
+    <footer class="site-footer">
+      <p>RNA Model Explorer</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+baseURL = "https://example.org/"
+languageCode = "en-us"
+title = "RNA Model Explorer"
+
+[params]
+  description = "Interactive browser-based explorer for RNA structural models"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
